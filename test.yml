@@ -9,49 +9,7 @@ servers:
   - url: 52.66.90.181/idm/v1
     description: Development
 paths:
-  /v2/identityManagement/oauth/token[backend]:
-    post:
-      tags:
-        - OAuth
-        - Integration
-      summary: Token generation endpoint
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                grant_type:
-                  type: string
-                  enum:
-                    - "urn:ietf:params:oauth:grant-type:client-credentials"
-                client_id:
-                  type: string
-                  format: uuid
-                client_secret:
-                  type: string
-                  format: uuid
-      responses:
-        "200":
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  access_token:
-                    type: string
-                    example: 2YotnFZFEjr1zCsicMWpAA
-                  token_type:
-                    type: string
-                    example: Bearer
-                  expires_in:
-                    type: number
-                    example: 3600
-                  refresh_token:
-                    type: string
-                    example: tGzv3JOkF0XG5Qx2TlKWIA
+
   /v2/identityManagement/oauth/token[token_exchange]:
     post:
       tags:
