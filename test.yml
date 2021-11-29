@@ -10,6 +10,8 @@ servers:
     description: Development
 paths:
 
+
+
   /v2/identityManagement/oauth/token[token_exchange]:
     post:
       tags:
